@@ -7,6 +7,7 @@ import { CacheProvider, EmotionCache } from '@emotion/react';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import createEmotionCache from 'createEmotionCache';
+import PageTransitionWrapper from '@/components/shared/animations/PageTransitionWrapper';
 
 
 const enhanced = Press_Start_2P({
@@ -29,13 +30,10 @@ interface MyAppProps extends AppProps {
 
 const clientSideEmotionCache = createEmotionCache();
 
-
 export default function App(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-
   return (
-
-          <CacheProvider value={emotionCache}>
+    <CacheProvider value={emotionCache}>
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width"/>
         </Head>
@@ -47,10 +45,13 @@ export default function App(props: MyAppProps) {
             } 
           `}
         </style>
-              <CssBaseline />
-              <Component {...pageProps} />
-          </CacheProvider>  
+        <CssBaseline />
 
+        <PageTransitionWrapper>
+            <Component {...pageProps} />
+        </PageTransitionWrapper>
+
+    </CacheProvider>
   );
 }
   
