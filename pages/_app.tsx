@@ -2,6 +2,12 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { Press_Start_2P, Encode_Sans_Condensed } from '@next/font/google';
 import Head from 'next/head';
+// eslint-disable-next-line import/named
+import { CacheProvider, EmotionCache } from '@emotion/react';
+import CssBaseline from '@mui/material/CssBaseline';
+
+import createEmotionCache from 'createEmotionCache';
+
 
 const enhanced = Press_Start_2P({
   weight: ['400'],
@@ -17,9 +23,19 @@ const standard = Encode_Sans_Condensed({
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache;
+}
+
+const clientSideEmotionCache = createEmotionCache();
+
+
+export default function App(props: MyAppProps) {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+
   return (
-      <>
+
+          <CacheProvider value={emotionCache}>
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width"/>
         </Head>
@@ -31,8 +47,10 @@ export default function App({ Component, pageProps }: AppProps) {
             } 
           `}
         </style>
-       <Component {...pageProps} />
-      </>
+              <CssBaseline />
+              <Component {...pageProps} />
+          </CacheProvider>  
+
   );
 }
   
