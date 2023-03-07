@@ -17,10 +17,13 @@ module.exports = {
         enhanced: ['var(--enhanced-font)', ...fontFamily.sans],
         standard: ['var(--standard-font)', ...fontFamily.sans],
       },
+      backgroundImage: {
+        'gradient-radial': 'var(--col-gradient)'
+      },
       colors: {
-        primary: '#28282B',
-        // contrast: 'var(--color-contrast)',
-        accent: '#FB8500',
+        primary: 'var(--col-primary)',
+        secondary: 'var(--col-secondary)',
+        contrast: 'var(--col-contrast)',
       },
     },
   },
