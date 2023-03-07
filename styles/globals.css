@@ -18,3 +18,8 @@
 
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background: black;
+    --swiper-navigation-color: #FB8500;
+}

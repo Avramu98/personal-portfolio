@@ -1,9 +1,13 @@
 import React from 'react';
-import Container from '@mui/material/Container';
+import Link from 'next/link';
+import { Box, Typography } from '@mui/material';
 
 const Home = () => {
   return (
-        <Container maxWidth='md' className='border-2 bg-gradient-radial h-96 font-enhanced'> Testing tailwind </Container>
+        <Box className='border-2 bg-gradient-radial h-screen w-screen font-enhanced'>
+          <Link href={'/testPage'}>Test page</Link>
+            <Typography className='font-enhanced text-center'>Testing center</Typography>
+        </Box>
   );
 };
 
