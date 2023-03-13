@@ -1,13 +1,18 @@
 import React from 'react';
-import Link from 'next/link';
-import { Box, Typography } from '@mui/material';
+import Container from '@mui/material/Container';
+
+import HackEffectTypography from '@/components/shared/typography/HackEffectTypography';
+import AnimatedBackgroundLayout from '@/components/shared/layouts/animatedBackgroundLayout';
 
 const Home = () => {
+
   return (
-        <Box className='border-2 bg-gradient-radial h-screen w-screen font-enhanced'>
-          <Link href={'/testPage'}>Test page</Link>
-            <Typography className='font-enhanced text-center'>Testing center</Typography>
-        </Box>
+      <AnimatedBackgroundLayout showParticles={true}>
+             <Container maxWidth='lg' className='h-screen grid place-items-center font-enhanced'>
+                 <HackEffectTypography value='Hello! Welcome to my portfolio!'/>
+             </Container>
+      </AnimatedBackgroundLayout>
+
   );
 };
 
