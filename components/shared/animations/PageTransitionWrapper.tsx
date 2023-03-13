@@ -2,7 +2,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
 import { useRouter } from 'next/router';
 
-import { AnimationWrapperI } from '@/types/index';
+import { AnimationWrapperI } from '@/components/shared/animations/types';
+
 
 const PageTransitionWrapper = ({ children }: AnimationWrapperI) => {
   const router = useRouter();

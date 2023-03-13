@@ -9,7 +9,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import createEmotionCache from 'createEmotionCache';
 import PageTransitionWrapper from '@/components/shared/animations/PageTransitionWrapper';
 
-
 const enhanced = Press_Start_2P({
   weight: ['400'],
   display: 'swap',

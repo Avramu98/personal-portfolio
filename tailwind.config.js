@@ -25,6 +25,22 @@ module.exports = {
         secondary: 'var(--col-secondary)',
         contrast: 'var(--col-contrast)',
       },
+      lineHeight: {
+        'tall': '5rem',
+      },
+      keyframes: {
+        deeperPulse: {
+          from: {
+            opacity: 1
+          },
+          to: {
+            opacity: 0.2
+          }
+        },
+      },
+      animation: {
+        'pulse-background': 'deeperPulse 5s ease-in-out infinite alternate',
+      },
     },
   },
   plugins: [],

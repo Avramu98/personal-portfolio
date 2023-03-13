@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
 
-interface Type {
+export interface AnimationWrapperI {
   children: ReactElement
 }

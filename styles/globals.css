@@ -1,15 +1,15 @@
 @tailwind base;
 
 @layer base {
-    :root {
-        --col-gradient: radial-gradient(circle at 0% 60%, rgba(72,75,106, 1) 1%, rgba(147,148,165, 1) 23%, rgba(228,229,241, 1) 40%, rgba(228,229,241, 1) 50%, rgba(254, 255, 255, 1) 60%);
-        --col-contrast: black;
-        --col-primary: blue;
-        --col-secondary: red;
-    }
+    /*:root {*/
+    /*    --col-gradient: radial-gradient(circle at 0% 60%, rgba(72,75,106, 1) 1%, rgba(147,148,165, 1) 23%, rgba(228,229,241, 1) 40%, rgba(228,229,241, 1) 50%, rgba(254, 255, 255, 1) 60%);*/
+    /*    --col-contrast: black;*/
+    /*    --col-primary: blue;*/
+    /*    --col-secondary: red;*/
+    /*}*/
 
-    :root[class="dark"] {
-        --col-gradient: radial-gradient(circle at 0% 54%, rgba(32, 38, 57, 1) 1%, rgba(39, 32, 57, 1) 30%, rgba(17, 11, 20, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    :root {
+        --col-gradient: radial-gradient(circle at 0% 51%, rgba(8, 125, 8, 0.6) 1%, rgba(0, 48, 0, 1) 5%, rgba(0, 70, 0, 1) 10%,rgba(0, 0, 0, 1) 45%);
         --col-contrast: white;
         --col-primary: black;
         --col-secondary: green;
@@ -21,5 +21,4 @@
 
 body {
     background: black;
-    --swiper-navigation-color: #FB8500;
 }
