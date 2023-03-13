@@ -6,6 +6,7 @@ const useLetterSwitchEffect = (receivedValue:string) => {
   const specialChars = '[`!@#$%^&*()_+-=[]{};\':"\\|,.<>/?~]/';
 
   const isLetter = (char:string) => {
+    // @ts-ignore
     return char.toUpperCase() === char.toLowerCase() || char.codePointAt(0) > 127;
   };
 
